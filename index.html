@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container center">
         <!-- SPA -->
         <section id="screen1" onclick="changeScreen(2)">
-            <div class="screen1-title">
+            <div class="screen1-title center">
                 <h1>Untitled Racing Game</h1>
                 <p>Click or press any key to continue</p>
             </div>
@@ -19,7 +19,76 @@
 
         <section id="screen2" onclick="changeScreen(3)">
             <div class="screen1-select">
-                
+                <div class="selectPlayerTitle flex row center">
+                    <div>
+                        <h1>Player 1</h1>
+                        <h2>Select two characters</h2>
+                    </div>
+                    <div>
+                        <h1>Player 2</h1>
+                        <h2>Select two characters</h2>
+                    </div>
+                </div>
+                <div class="selectCharacter flex column center">
+                    <div class="selCharRow1 flex row center">
+                        <div class="character1">
+                                <img id="1" src="assets/img/bluebat.gif" alt="Bluebat" onclick="selectCharacter(1)">
+                        </div>
+                        <div class="character2">
+                                <img id="2" src="assets/img/bus01.gif" alt="Bus" onclick="selectCharacter(2)">
+                        </div>
+                        <div class="character3">
+                                    <img id="3" src="assets/img/car01.gif" alt="Car" onclick="selectCharacter(3)">
+                        </div>
+                        <div class="character4">
+                                <img id="4" src="assets/img/flappy-box.gif" alt="Flappy Box" onclick="selectCharacter(4)">
+                        </div>
+                    </div>
+                    <div class="selCharRow2 flex row center">
+                        <div class="character5">
+                                <img id="5" src="assets/img/green-monster.gif" alt="Green Monster" onclick="selectCharacter(5)">
+                        </div>
+                        <div class="character6">
+                                <img id="6" src="assets/img/marshmallow.gif" alt="Marshmallow" onclick="selectCharacter(6)">
+                        </div>
+                        <div class="character7">
+                                <img id="7" src="assets/img/spaceship01.png" alt="Spaceship" onclick="selectCharacter(7)">
+                        </div>
+                        <div class="character8">
+                                <img id="8" src="assets/img/ufo.png" alt="Ufo" onclick="selectCharacter(8)">
+                        </div>
+                    </div>
+                </div>
+                <div class="selectConfirm flex row center">
+                    <div class="char1">
+                        <div class="char1-img"></div>
+                        <div class="char1-info">
+                            <div id="data1" class="CharacterData">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="char2">
+                        <div class="char2-img"></div>
+                        <div class="char2-info">
+                            <div id="data2" class="CharacterData">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="char3">
+                        <div class="char3-img"></div>
+                        <div class="char3-info">
+                            <div id="data3" class="CharacterData">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="char4">
+                        <div class="char4-img"></div>
+                        <div class="char4-info">
+                            <div id="data4" class="CharacterData">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 

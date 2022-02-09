@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,14 +9,38 @@
 
 html {
     font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
+    display: flex;
     height: 100vh;
     width: 100vw;
 }
 
-/* Screen - SPA */
+.center {
+    align-items: center; 
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+/* SPA */
 
 #screen1 {
     height: 100vh;
@@ -35,22 +62,115 @@ html {
 .screen1-ready,
 .screen1-game,
 .screen1-restart {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
 }
 
-.screen1-title {
-    background-color: red;
+/* Screen1 - Title */
+
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(19, 71, 8);
 }
+
+.screen1-title {
+    background-color: #C0CD28;
+}
+
+/* Screen2 - Selection */
+
 .screen1-select {
     background-color: green;
 }
+
+.screen3-select {
+    background: blue no-repeat;
+}
+
+.selectPlayerTitle {
+    background-color: blueviolet;
+    gap: 15%;
+    height: 20%;
+    width: 100%;
+}
+
+.selectPlayerTitle h1 {
+    font-size: 70%;
+}
+
+.selectPlayerTitle h2 {
+    font-size: 60%;
+}
+
+.selectCharacter {
+    height: 50%;
+    width: 100%;
+}
+
+.selCharRow1, .selCharRow2 {
+    height: 50%;
+    width: 100%;
+}
+
+.character1,
+.character2,
+.character3,
+.character4 {
+    background-color: coral;
+    height: 80%;
+    width: 25%;
+    margin: 1%;
+}
+
+.character5,
+.character6,
+.character7,
+.character8 {
+    background-color: forestgreen;
+    height: 80%;
+    width: 25%;
+    margin: 1%;
+}
+
+.selection {
+    filter: grayscale(90%);
+}
+
+.selectCharacter img {
+    height: 100%;
+    width: 100%;
+}
+
+.selectConfirm {
+    background-color: orange;
+    height: 30%;
+    width: 100%;
+}
+
+.char1,
+.char2,
+.char3,
+.char4 {
+    height: 100%;
+    width: 25%;
+}
+
+/* Screen3 - Ready */
+
 .screen1-ready {
     background-color: blue;
 }
+
+/* Screen4 - Game */
+
 .screen1-game {
     background-color: cyan;
 }
+
+/* Screen5 - Retry */
+
 .screen1-restart {
     background-color: magenta;
 }
