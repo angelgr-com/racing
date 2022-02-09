@@ -1,0 +1,25 @@
+/* Screen - SPA */
+
+#screen2,
+#screen3,
+#screen4,
+#screen5,
+#screen6 {
+    display: none;
+}
+
+.screen1-title {
+    background-color: red;
+}
+.screen1-select {
+    background-color: green;
+}
+.screen1-ready {
+    background-color: blue;
+}
+.screen1-game {
+    background-color: cyan;
+}
+.screen1-restart {
+    background-color: magenta;
+}
