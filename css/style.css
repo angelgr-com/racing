@@ -1,4 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 1rem;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+
 /* Screen - SPA */
+
+#screen1 {
+    height: 100vh;
+    width: 100vw;
+}
 
 #screen2,
 #screen3,
@@ -6,6 +26,17 @@
 #screen5,
 #screen6 {
     display: none;
+    height: 100vh;
+    width: 100vw;
+}
+
+.screen1-title,
+.screen1-select,
+.screen1-ready,
+.screen1-game,
+.screen1-restart {
+    height: 100%;
+    width: 100%;
 }
 
 .screen1-title {
