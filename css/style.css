@@ -58,10 +58,10 @@ body {
 }
 
 .screen1-title,
-.screen1-select,
-.screen1-ready,
-.screen1-game,
-.screen1-restart {
+.screen2-select,
+.screen3-ready,
+.screen4-game,
+.screen5-restart {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -85,7 +85,7 @@ h1 {
     background-color: green;
 }
 
-.screen3-select {
+.screen3-ready {
     background: blue no-repeat;
 }
 

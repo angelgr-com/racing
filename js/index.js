@@ -49,8 +49,18 @@ const selectCharacter = (charID) => {
     //When selection is complete, show Ready screen after 3 second
     if (selectedCharacters > 4) {
         setTimeout(() => {
-            changeScreen(4);
+            changeScreen(3);
         }, 3000);
-        readyScreen();
     }
+};
+
+// 5 seconds Ready screen and then show Game screen
+const readyScreen = () => {
+    setTimeout(() => {
+        changeScreen(5);
+    }, 5000);
+    // start game logic
+    setTimeout(() => {
+        // game();
+    }, 5000);
 };
