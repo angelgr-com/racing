@@ -65,12 +65,11 @@ const setupInputs = () => {
 const move = (playerImage, indexPlayer) => {
     player[indexPlayer-1].distance += 400;
     let num = 25 - player[indexPlayer-1].distance / CIRCUIT_LENGTH;
-    console.log('num: ', num);
-    console.log('playerImage: ', playerImage)
     playerImage.style.marginTop = `${num}em`;
-    console.log('playerImage margin-top: ', playerImage.style.marginTop)
+    console.log('num: ', num)
 
-    if(num >= 25) {
+    if(num <= 0) {
+        console.log('entra al if');
         winnerScreen(indexPlayer, player[indexPlayer-1].name);
     }
 }
