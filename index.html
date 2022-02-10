@@ -120,31 +120,39 @@
             </div>
         </section>
 
-        <section id="screen4" onclick="changeScreen(5)">
-            <div class="screen4-game">
-                <div class="finish">
-                    <div class="finish-p1"></div>
-                    <div class="finish-p2"></div>
-                    <div class="finish-p3"></div>
-                    <div class="finish-p4"></div>
+        <section id="screen4" onclick="game()">
+            <div class="screen4-game flex row center">
+                <div class="finish flex row">
+                    <div class="finish-p1">Finish</div>
+                    <div class="finish-p2">Finish</div>
+                    <div class="finish-p3">Finish</div>
+                    <div class="finish-p4">Finish</div>
                 </div>
-                <div class="race">
-                    <div class="race-p1"></div>
-                    <div class="race-p1"></div>
-                    <div class="race-p1"></div>
-                    <div class="race-p1"></div>
+                <div class="race flex row">
+                    <div class="race-p1">
+                        <div id="sel1-img"></div>
+                    </div>
+                    <div class="race-p1">
+                        <div id="sel2-img"></div>
+                    </div>
+                    <div class="race-p1">
+                        <div id="sel3-img"></div>
+                    </div>
+                    <div class="race-p1">
+                        <div id="sel4-img"></div>
+                    </div>
                 </div>
-                <div class="start">
-                    <div class="start-p1"></div>
-                    <div class="start-p2"></div>
-                    <div class="start-p3"></div>
-                    <div class="start-p4"></div>
+                <div class="start flex row">
+                    <div class="start-p1">Start</div>
+                    <div class="start-p2">Start</div>
+                    <div class="start-p3">Start</div>
+                    <div class="start-p4">Start</div>
                 </div>
-                <div class="info">
-                    <div class="info-p1"></div>
-                    <div class="info-p2"></div>
-                    <div class="info-p3"></div>
-                    <div class="info-p4"></div>
+                <div class="info flex row">
+                    <div class="info-p1">Info</div>
+                    <div class="info-p2">Info</div>
+                    <div class="info-p3">Info</div>
+                    <div class="info-p4">Info</div>
                 </div>
             </div>
         </section>
@@ -157,5 +165,6 @@
     </div>
     <script src="js/characters.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/game.js"></script>
 </body>
 </html>

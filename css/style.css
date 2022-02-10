@@ -186,7 +186,57 @@ h1 {
 
 .screen4-game {
     background-color: cyan;
-    
+}
+
+.finish {
+    background-color: green;
+    height: 10%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.finish-p1,
+.finish-p2,
+.finish-p3,
+.finish-p4 {
+    border: 5px solid orange;
+    width: 25%;
+}
+
+.race {
+    background-color: black;
+    height: 65%;
+    width: 100%;
+}
+.race-p1,
+.race-p2,
+.race-p3,
+.race-p4 {
+    border: 5px solid orange;
+    width: 25%;
+}
+.start {
+    background-color: red;
+    height: 10%;
+    width: 100%;
+}
+.start-p1,
+.start-p2,
+.start-p3,
+.start-p4 {
+    border: 5px solid orange;
+    width: 25%;
+}
+.info {
+    background-color: yellowgreen;
+    height: 15%;
+    width: 100%;
+}
+.info-p1,
+.info-p2,
+.info-p3,
+.info-p4 {
+    border: 5px solid orange;
+    width: 25%;
 }
 
 /* Screen5 - Retry */
