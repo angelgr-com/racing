@@ -220,7 +220,7 @@ h1 {
 #racer3-img img,
 #racer4-img img {
     height: 5em;
-    background-color: #aaaa;
+    border-top: 3px solid rgba(255, 0, 0, 0.5);
     margin-top: 25em;
 }
 .start {

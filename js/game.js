@@ -1,4 +1,4 @@
-const CIRCUIT_LENGTH = 3000;
+const CIRCUIT_LENGTH = 1000;
 
 const game = () => {
     changeScreen(4);
@@ -63,10 +63,21 @@ const setupInputs = () => {
 };
 
 const move = (playerImage, indexPlayer) => {
-    player[indexPlayer-1].distance += -600;
-    let num = (25 - player[indexPlayer-1].distance) / CIRCUIT_LENGTH;
+    player[indexPlayer-1].distance += 400;
+    let num = 25 - player[indexPlayer-1].distance / CIRCUIT_LENGTH;
     console.log('num: ', num);
     console.log('playerImage: ', playerImage)
     playerImage.style.marginTop = `${num}em`;
     console.log('playerImage margin-top: ', playerImage.style.marginTop)
+
+    if(num >= 25) {
+        winnerScreen(indexPlayer, player[indexPlayer-1].name);
+    }
+}
+
+const winnerScreen = (playerNumber, playerName) => {
+    changeScreen(5);
+    let winnerScreen = document.querySelector('.screen5-restart');
+    winnerScreen.insertAdjacentHTML('afterbegin', `<h1>Player ${playerNumber} wins!!!<h1><h2>${playerName} is faster than light!!`);
+
 }
