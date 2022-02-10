@@ -95,6 +95,7 @@ const addCharacterProperties = (num) => {
         Type: ${player[num-1].type}<br>
         maxSpeed (m/s): ${player[num-1].maxSpeed}<br>
         Weight (kg): ${player[num-1].weight}<br>
+        <h2>To RUN: press number ${num}</h2>
     `;
     charInfo.innerHTML = info;
 }
