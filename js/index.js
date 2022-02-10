@@ -1,5 +1,3 @@
-'use strict';
-
 // Restart game
 const cleanGame = () => {
     players = [];
