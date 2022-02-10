@@ -47,7 +47,7 @@ const selectCharacter = (charID) => {
     //When selection is complete, show Ready screen after 3 second
     if (selectedCharacters > 4) {
         setTimeout(() => {
-            readyScreen(3);
+            readyScreen(1500);
         }, 3000);
     }
 };
