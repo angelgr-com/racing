@@ -153,62 +153,34 @@ h1 {
 
 .screen3-ready {
     background-color: blue;
-    width: 100%;
-    height: 100%;
+}
+
+.screen3-row1,
+.screen3-row2 {
+    display: flex;
+    flex-direction: row;
+    margin: 3em;
 }
 
 .screen3-characters {
-    background-color: red;
-    width: 70%;
-    height: 70%;
+    width: 80%;
 }
 
-.char1 {
-    background-color: green;
-    width: 50%;
-}
-.char2 {
-    background-color: red;
-    width: 50%;
-}
-.char3 {
-    background-color: yellow;
-    width: 50%;
-}
+.char1,
+.char2,
+.char3,
 .char4 {
-    background-color: orange;
-    width: 50%;
+    display: flex;
+    flex-direction: row;
 }
 
 #sel1-img img,
 #sel2-img img,
 #sel3-img img,
 #sel4-img img {
-    width: 100%;
+    width: 10em;
+    margin: 1em;
 }
-
-#sel1-img,
-#sel1-info,
-#sel2-img,
-#sel2-info,
-#sel3-img,
-#sel3-info,
-#sel4-img,
-#sel4-info {
-    display:inline-block;
-}
-
-#sel1-img,
-#sel1-info,
-#sel2-img,
-#sel2-info,
-#sel3-img,
-#sel3-info,
-#sel4-img,
-#sel4-info {
-    width: 50%;
-}
-
 
 /* Screen4 - Game */
 

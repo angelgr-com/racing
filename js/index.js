@@ -91,11 +91,11 @@ const addCharacterProperties = (num) => {
 
     const charInfo = document.querySelector(`#sel${num}-info`);
     const info = `
-        ${player[num-1].name}<br>
-        Type: ${player[num-1].type}<br>
-        maxSpeed (m/s): ${player[num-1].maxSpeed}<br>
-        Weight (kg): ${player[num-1].weight}<br>
-        <h2>To RUN: press number ${num}</h2>
+        <h2>${player[num-1].name}</h2><br>
+        <strong>Type:</strong> ${player[num-1].type}<br>
+        <strong>maxSpeed (m/s):</strong> ${player[num-1].maxSpeed}<br>
+        <strong>Weight (kg):</strong> ${player[num-1].weight}<br><br>
+        <h3>To RUN press number ${num}</h3>
     `;
     charInfo.innerHTML = info;
 }
