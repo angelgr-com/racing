@@ -77,14 +77,14 @@ const showSelectedCharacters = () => {
 
 const addCharacterImage = (num) => {
     console.log(`char${num}-img`);
-    const charImg = document.querySelector(`#sel${num}-img`);
+    const charImg = document.querySelector(`.sel${num}-img`);
     let elem = document.createElement("img");
     elem.src = `${player[num-1].img}`;
     elem.alt = `${player[num-1].name}`;
     charImg.appendChild(elem);
 }
 const addCharacterProperties = (num) => {
-    const charInfo = document.querySelector(`#sel${num}-info`);
+    const charInfo = document.querySelector(`.sel${num}-info`);
     const info = `
         <h2>${player[num-1].name}</h2><br>
         <strong>Type:</strong> ${player[num-1].type}<br>

@@ -211,8 +211,17 @@ h1 {
 .race-p2,
 .race-p3,
 .race-p4 {
+    justify-content: center;
     border: 5px solid orange;
     width: 25%;
+}
+#racer1-img img,
+#racer2-img img,
+#racer3-img img,
+#racer4-img img {
+    height: 5em;
+    background-color: #aaaa;
+    margin-top: 25em;
 }
 .start {
     background-color: red;
