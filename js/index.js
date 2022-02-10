@@ -69,8 +69,8 @@ const readyScreen = () => {
 // Screen3 - Ready
 
 const showSelectedCharacters = () => {
-    const screen3Ready = document.querySelector('.screen3-ready');
-    screen3Ready.insertAdjacentHTML('afterbegin', getCharacterHTML());
+    // const screen3Ready = document.querySelector('.screen3-ready');
+    // screen3Ready.insertAdjacentHTML('afterbegin', getCharacterHTML());
     for(let i=1; i<=player.length; i++) {
         addCharacterProperties(i);
     }
@@ -78,21 +78,27 @@ const showSelectedCharacters = () => {
 
 const addCharacterProperties = (num) => {
     console.log(`char${num}-img`);
-    const charImg = document.querySelector(`.char${num}-img`);
-    const img = `<img src="${player[num-1].img}" alt="${player[num-1].name}">`;
-    console.log(img);
-    charImg.innerHTML = img;
-    
-    const charInfo = document.querySelector(`.char${num}-info`);
+    const charImg = document.querySelector(`#sel${num}-img`);
+    // console.log('charImg: ', charImg);
+    let elem = document.createElement("img");
+    elem.src = `${player[num-1].img}`;
+    elem.alt = `${player[num-1].name}`;
+    // document.body.appendChild(img);
+    // const img = `<img src="${player[num-1].img}" alt="${player[num-1].name}">`;
+    // console.log(img);
+    // charImg.insertAdjacentHTML('beforeend', img);
+    charImg.appendChild(elem);
+
+    const charInfo = document.querySelector(`#sel${num}-info`);
     const info = `
-    ${player[num-1].name}<br>
-    Type: ${player[num-1].type}<br>
-    maxSpeed (m/s): ${player[num-1].maxSpeed}<br>
-    Weight (kg): ${player[num-1].weight}<br>
+        ${player[num-1].name}<br>
+        Type: ${player[num-1].type}<br>
+        maxSpeed (m/s): ${player[num-1].maxSpeed}<br>
+        Weight (kg): ${player[num-1].weight}<br>
     `;
     charInfo.innerHTML = info;
 }
-
+    
 const getCharacterHTML = () => {
     let html = '';
     for(let i=1; i<=player.length; i++){
@@ -103,3 +109,4 @@ const getCharacterHTML = () => {
     }
     return html;
 };
+
