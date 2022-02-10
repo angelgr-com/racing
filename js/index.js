@@ -27,7 +27,7 @@ const changeScreen = (number) => {
     }
 };
 
-// Character selection
+// Screen2 - Character selection
 let imgPlayer = [];
 let selectedCharacters = 1;
 
@@ -49,7 +49,7 @@ const selectCharacter = (charID) => {
     //When selection is complete, show Ready screen after 3 second
     if (selectedCharacters > 4) {
         setTimeout(() => {
-            changeScreen(3);
+            readyScreen(3);
         }, 3000);
     }
 };
@@ -57,10 +57,49 @@ const selectCharacter = (charID) => {
 // 5 seconds Ready screen and then show Game screen
 const readyScreen = () => {
     setTimeout(() => {
-        changeScreen(5);
-    }, 5000);
+        changeScreen(3);
+        showSelectedCharacters();
+    }, 2000);
     // start game logic
     setTimeout(() => {
         // game();
     }, 5000);
+};
+
+// Screen3 - Ready
+
+const showSelectedCharacters = () => {
+    const screen3Ready = document.querySelector('.screen3-ready');
+    screen3Ready.insertAdjacentHTML('afterbegin', getCharacterHTML());
+    for(let i=1; i<=player.length; i++) {
+        addCharacterProperties(i);
+    }
+};
+
+const addCharacterProperties = (num) => {
+    console.log(`char${num}-img`);
+    const charImg = document.querySelector(`.char${num}-img`);
+    const img = `<img src="${player[num-1].img}" alt="${player[num-1].name}">`;
+    console.log(img);
+    charImg.innerHTML = img;
+    
+    const charInfo = document.querySelector(`.char${num}-info`);
+    const info = `
+    ${player[num-1].name}<br>
+    Type: ${player[num-1].type}<br>
+    maxSpeed (m/s): ${player[num-1].maxSpeed}<br>
+    Weight (kg): ${player[num-1].weight}<br>
+    `;
+    charInfo.innerHTML = info;
+}
+
+const getCharacterHTML = () => {
+    let html = '';
+    for(let i=1; i<=player.length; i++){
+        html += `<div class="char` + i + `">`;
+        html += `<div class="char` + i + `-img"></div>`;
+        html += `<div class="char` + i + `-info">`;
+        html += `<div id="data`+ i + `" class="CharacterData"></div></div></div>`;
+    }
+    return html;
 };

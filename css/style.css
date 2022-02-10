@@ -159,18 +159,19 @@ h1 {
 
 /* Screen3 - Ready */
 
-.screen1-ready {
+.screen3-ready {
+    flex-wrap: wrap;
     background-color: blue;
 }
 
 /* Screen4 - Game */
 
-.screen1-game {
+.screen4-game {
     background-color: cyan;
 }
 
 /* Screen5 - Retry */
 
-.screen1-restart {
+.screen5-restart {
     background-color: magenta;
 }
