@@ -67,8 +67,6 @@ const readyScreen = () => {
 // Screen3 - Ready
 
 const showSelectedCharacters = () => {
-    // const screen3Ready = document.querySelector('.screen3-ready');
-    // screen3Ready.insertAdjacentHTML('afterbegin', getCharacterHTML());
     for(let i=1; i<=player.length; i++) {
         addCharacterImage(i);
         addCharacterProperties(i);
