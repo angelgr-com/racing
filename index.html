@@ -8,12 +8,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <audio volume="0.1" autoplay>
+        <source src="assets/audio/speck.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
     <div class="container center">
         <!-- SPA -->
         <section id="screen1" onclick="changeScreen(2)">
             <div class="screen1-title center">
-                <h1>Untitled Racing Game</h1>
-                <p>Click or press any key to continue</p>
+                <h1><span id="h1-w1">Untitled</span> <span id="h1-w2">Racing</span> <span id="h1-w3">Game</span></h1>
+                <h2>Click to continue</h2>
+
+                <h2 class="margin-top">Art by Bevouliin</h2>
+                <a class="style-link" href="https://bevouliin.com/">https://bevouliin.com/</a>
+                
+                <h2 class="margin-top">Music by Speck</h2>
+                <p>2021 (CC BY-NC 3.0)</p>
+                 <p>"Dubby Jinglefunk's Not So Silent Night"</p>
+                 <a class="style-link" href="http://dig.ccmixter.org/files/speck/64503">http://dig.ccmixter.org/files/speck/64503</a>
+                 <p>Ft: Admiral Bob, Martijn de Boer, airtone, Carosone</p>
             </div>
         </section>
 
@@ -21,7 +34,7 @@
             <div class="screen2-select">
                 <div class="selectPlayerTitle flex row center">
                     <div>
-                        <h1>Select four characters</h1>
+                        <h1><span id="h1-w1">Select</span> <span id="h1-w2">four</span> <span id="h1-w3">characters</span></h1>
                     </div>
                 </div>
                 <div class="selectCharacter flex column center">
@@ -58,28 +71,28 @@
                     <div class="char1">
                         <div class="char1-img"></div>
                         <div class="char1-info">
-                            <div id="data1" class="CharacterData">
+                            <div id="data1" class="character-data">
                             </div>
                         </div>
                     </div>
                     <div class="char2">
                         <div class="char2-img"></div>
                         <div class="char2-info">
-                            <div id="data2" class="CharacterData">
+                            <div id="data2" class="character-data">
                             </div>
                         </div>
                     </div>
                     <div class="char3">
                         <div class="char3-img"></div>
                         <div class="char3-info">
-                            <div id="data3" class="CharacterData">
+                            <div id="data3" class="character-data">
                             </div>
                         </div>
                     </div>
                     <div class="char4">
                         <div class="char4-img"></div>
-                        <div class="char4-info">
-                            <div id="data4" class="CharacterData">
+                        <div class="char4-info flex">
+                            <div id="data4" class="character-data">
                             </div>
                         </div>
                     </div>
@@ -89,8 +102,8 @@
 
         <section id="screen3" onclick="game()">
             <div class="screen3-ready flex column center">
-                <h1>Get Ready!</h1>
-                <p>Click or press any key to continue</p>
+                <h1><span id="h1-w1">Geeeeeet</span> <span id="h1-w1">Readyyyyy!</span></h1>
+                <h2>Click to continue</h2>
                 <div class="screen3-characters flex column center">
                     <div class="screen3-row1">
                         <div class="char1">
@@ -122,11 +135,11 @@
 
         <section id="screen4">
             <div class="screen4-game flex row center">
-                <div class="finish flex row">
-                    <div class="finish-p1">Finish</div>
-                    <div class="finish-p2">Finish</div>
-                    <div class="finish-p3">Finish</div>
-                    <div class="finish-p4">Finish</div>
+                <div class="finish flex">
+                    <div class="finish-p1 center"><h2><span id="h1-w1">Finish!</span></h2></div>
+                    <div class="finish-p2 center"><h2><span id="h1-w1">Finish!</span></h2></div>
+                    <div class="finish-p3 center"><h2><span id="h1-w1">Finish!</span></h2></div>
+                    <div class="finish-p4 center"><h2><span id="h1-w1">Finish!</span></h2></div>
                 </div>
                 <div class="race flex row">
                     <div class="race-p1 flex">
@@ -143,22 +156,58 @@
                     </div>
                 </div>
                 <div class="start flex row">
-                    <div class="start-p1">Start</div>
-                    <div class="start-p2">Start</div>
-                    <div class="start-p3">Start</div>
-                    <div class="start-p4">Start</div>
+                    <div class="start-p1"><h2><span id="h1-w1">Start!</span></h2></div>
+                    <div class="start-p2"><h2><span id="h1-w1">Start!</span></h2></div>
+                    <div class="start-p3"><h2><span id="h1-w1">Start!</span></h2></div>
+                    <div class="start-p4"><h2><span id="h1-w1">Start!</span></h2></div>
                 </div>
-                <div class="info flex row">
-                    <div class="info-p1">Info</div>
-                    <div class="info-p2">Info</div>
-                    <div class="info-p3">Info</div>
-                    <div class="info-p4">Info</div>
+                <div class="info flex">
+                    <div class="info-p1">
+                        <div class="flex">
+                            <div><h2>Distance: </h2></div>
+                            <div class="distance-p1"></div>
+                        </div>
+                        <div class="flex">
+                            <div><h2>Finish line: </h2></div>
+                            <div class="finish-line-p1"></div>
+                        </div>
+                    </div>
+                    <div class="info-p2">
+                        <div class="flex">
+                            <div><h2>Distance: </h2></div>
+                            <div class="distance-p2"></div>
+                        </div>
+                        <div class="flex">
+                            <div><h2>Finish line: </h2></div>
+                            <div class="finish-line-p2"></div>
+                        </div>
+                    </div>
+                    <div class="info-p3">
+                        <div class="flex">
+                            <div><h2>Distance: </h2></div>
+                            <div class="distance-p3"></div>
+                        </div>
+                        <div class="flex">
+                            <div><h2>Finish line: </h2></div>
+                            <div class="finish-line-p3"></div>
+                        </div>
+                    </div>
+                    <div class="info-p4">
+                        <div>
+                            <div><h2>Distance: </h2></div>
+                            <div class="distance-p4"></div>
+                        </div>
+                        <div>
+                            <div><h2>Finish line: </h2></div>
+                            <div class="finish-line-p4"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="screen5" onclick="changeScreen(1)">
-            <div class="screen5-restart">
+        <section id="screen5" onclick="location.reload();">
+            <div class="screen5-restart flex column center">
             </div>
         </section>
     </div>

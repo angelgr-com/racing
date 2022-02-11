@@ -69,14 +69,14 @@ const move = (playerImage, indexPlayer) => {
     console.log('num: ', num)
 
     if(num <= 0) {
-        console.log('entra al if');
         winnerScreen(indexPlayer, player[indexPlayer-1].name);
     }
-}
 
-const winnerScreen = (playerNumber, playerName) => {
-    changeScreen(5);
-    let winnerScreen = document.querySelector('.screen5-restart');
-    winnerScreen.insertAdjacentHTML('afterbegin', `<h1>Player ${playerNumber} wins!!!<h1><h2>${playerName} is faster than light!!`);
+    let distance = document.querySelector(`.distance-p${indexPlayer}`);
+    distanceMeters = player[indexPlayer-1].distance;
+    distance.innerHTML = `<h3>${distanceMeters}</h3>`;
 
+    let finish = document.querySelector(`.finish-line-p${indexPlayer}`);
+    finishMeters = CIRCUIT_LENGTH + 24000 - distanceMeters;
+    finish.innerHTML = `<h3>${finishMeters}</h3>`;
 }

@@ -12,6 +12,8 @@ html {
     font-family: 'Open Sans', sans-serif;
 }
 
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -73,35 +75,49 @@ body {
 h1 {
     font-family: 'Luckiest Guy', cursive;
     color: rgb(19, 71, 8);
+    font-size: 3rem;
+}
+
+#h1-w1, #h1-w3 {
+    animation: spaceship 1s ease infinite;
+}
+
+#h1-w2 {
+    animation: ufo 1s ease infinite;
+}
+
+h2 {
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(54, 88, 48);
+    font-size: 1.5rem;
+    margin-right: 0.25em;
+}
+
+.margin-top {
+    margin-top: 2em;
+}
+
+.style-link {
+    font-size: 1.3em;
+    color: rgb(54, 88, 48);
 }
 
 .screen1-title {
-    background-color: #C0CD28;
+    background-color: rgb(127, 175, 55);
 }
 
 /* Screen2 - Selection */
 
-.screen1-select {
-    background-color: green;
-}
-
-.screen3-ready {
-    background: blue no-repeat;
-}
-
-.selectPlayerTitle {
-    background-color: blueviolet;
-    gap: 15%;
-    height: 20%;
+.screen2-select {
+    background-color: rgb(127, 175, 55);
     width: 100%;
 }
 
-.selectPlayerTitle h1 {
-    font-size: 70%;
-}
-
-.selectPlayerTitle h2 {
-    font-size: 60%;
+.selectPlayerTitle {
+    background-color: rgb(127, 175, 55);
+    gap: 15%;
+    height: 20%;
+    width: 100%;
 }
 
 .selectCharacter {
@@ -128,7 +144,7 @@ h1 {
 .character6,
 .character7,
 .character8 {
-    background-color: forestgreen;
+    background-color: #42751D;
     height: 80%;
     width: 25%;
     margin: 1%;
@@ -149,10 +165,40 @@ h1 {
     width: 100%;
 }
 
+.character-data {
+    margin-right: 10em;
+    justify-content: space-around;
+}
+
+img[src*="assets/img/spaceship01.png"],
+img[src*="assets/img/ufo.png"] {
+    animation: spaceship 1s ease infinite;
+}
+
+@keyframes spaceship {
+    0%   {padding-bottom: 0em;}
+    25%  {padding-right: 0.1em;}
+    50%  {padding-bottom: 0.2em;}
+    75%  {padding-left: 0.1em;}
+    100% {padding-bottom: 0em;}
+}
+
+img[src*="assets/img/ufo.png"] {
+    animation: ufo 1s ease infinite;
+}
+
+@keyframes ufo {
+    0%   {padding-bottom: 0em;}
+    25%  {padding-left: 0.1em;}
+    50%  {padding-bottom: 0.2em;}
+    75%  {padding-bottom: 0.1em;}
+    100% {padding-bottom: 0em;}
+}
+
 /* Screen3 - Ready */
 
 .screen3-ready {
-    background-color: blue;
+    background: rgb(112, 156, 45);
 }
 
 .screen3-row1,
@@ -174,12 +220,34 @@ h1 {
     flex-direction: row;
 }
 
-#sel1-img img,
-#sel2-img img,
-#sel3-img img,
-#sel4-img img {
-    width: 10em;
-    margin: 1em;
+.char1-info,
+.char2-info,
+.char3-info,
+.char4-info {
+    height: 14em;
+}
+
+.sel1-img,
+.sel2-img,
+.sel3-img,
+.sel4-img {
+    width: 13em;
+    margin-right: 1em;
+}
+
+.sel1-img img,
+.sel2-img img,
+.sel3-img img,
+.sel4-img img {
+    width: 13em;
+    margin-right: 1em;
+}
+
+.sel1-info,
+.sel2-info,
+.sel3-info,
+.sel4-info {
+    margin-right: 2em;
 }
 
 /* Screen4 - Game */
@@ -189,7 +257,7 @@ h1 {
 }
 
 .finish {
-    background-color: green;
+    background-color: rgb(127, 175, 55);
     height: 10%;
     width: 100%;
     justify-content: space-evenly;
@@ -203,7 +271,7 @@ h1 {
 }
 
 .race {
-    background-color: black;
+    background-color: rgb(103, 117, 145);
     height: 65%;
     width: 100%;
 }
@@ -220,11 +288,12 @@ h1 {
 #racer3-img img,
 #racer4-img img {
     height: 5em;
+    width: 9em;
     border-top: 3px solid rgba(255, 0, 0, 0.5);
     margin-top: 25em;
 }
 .start {
-    background-color: red;
+    background-color: rgb(189, 106, 106);
     height: 10%;
     width: 100%;
 }
@@ -251,5 +320,5 @@ h1 {
 /* Screen5 - Retry */
 
 .screen5-restart {
-    background-color: magenta;
+    background-color: rgb(127, 175, 55);
 }
